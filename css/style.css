@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+
+header{
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+
+.logo path {
+    fill: #ffffff; /* Default color */
+    transition: fill 0.3s ease;
+  }
+
+  .logo:hover path {
+    fill: #e52e2e; /* Hover color */
+  }
+
+.head-bg{
+  background-color: #6ed4d1;
+  
+}
+
+.nav ul{
+  list-style: none;
+  margin: 35px;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+
+}
+
+.nav ul li{
+  padding: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+.nav a {
+  position: relative;
+  display: inline-block;
+  color: #ffffff; /* Default color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+
+
+.nav a:hover::after,
+.nav a:focus-visible::after {
+  width: 100%;
+}
+
+.banner-bg{
+  background-image: url(/pictures/bn\ \(1\).jpg);
+  padding: 100px;
+  
+  color: #fff;
+  
+ 
+  background-repeat: no-repeat ;
+  background-position: center;
+  background-size: cover;
+  
+   font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.banner-bg p{
+    padding-bottom: 0%;
+    margin-block: 50px;
+    font-size: 90px;
+   font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1{
+  color: rgb(255, 0, 85);
+  padding: 0px;
+  margin-top: 10px;
+  
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif , system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+h1 span{
+  color: rgb(0, 229, 255);
+}
+.sec1{
+  color: white;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-family: sans-serif;
+  border: #6ed4d1 solid;
+  background-color: rgba(106, 22, 208, 0.532) ;
+}
+.sec1 p {
+  padding-left: 5.5px;
+}
+
+.column{
+    display:grid;
+    gap: 30px;
+    margin-block-end: 60px;
+    @media(width > 720px){
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+
+    }
+}
+
+
+
+
+
+    .products-section {
+      padding: 2rem;
+      background-color: #f9f9f9;
+      font-family: sans-serif;
+    }
+
+    .products-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .product-name {
+      margin: 0.8rem 0 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .stars {
+      color: #ffb700;
+      font-size: 1rem;
+    }
+
+    .price {
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      color: #333;
+    }
+
+
+
+
+
+
+
+
+
+
