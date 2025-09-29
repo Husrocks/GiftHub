@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - GiftHub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/contact.css">
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-content">
+        <a href="index.html" class="logo">
+          <i class="fas fa-gift"></i> GiftHub
+        </a>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1 class="hero-title">Get in Touch</h1>
+        <p class="hero-subtitle">
+          We're here to help make your gifting experience perfect
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Container -->
+    <div class="contact-container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+          <div class="form-header">
+            <h2 class="form-title">Send Us a Message</h2>
+            <p class="form-subtitle">
+              Fill out the form below and we'll get back to you within 24 hours
+            </p>
+          </div>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required />
+                <i class="fas fa-user"></i>
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required />
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required />
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="order">Order Support</option>
+                <option value="shipping">Shipping Question</option>
+                <option value="return">Returns & Refunds</option>
+                <option value="corporate">Corporate Gifts</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fas fa-list"></i>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us how we can help you..."
+                required
+              ></textarea>
+              <i class="fas fa-comment"></i>
+            </div>
+            <div class="checkbox-group">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter"
+                >Subscribe to our newsletter for exclusive offers</label
+              >
+            </div>
+            <button type="submit" class="submit-btn">
+              <span>Send Message</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-section">
+          <div class="info-header">
+            <h2 class="info-title">Let's Connect</h2>
+            <p class="info-subtitle">Choose your preferred way to reach us</p>
+          </div>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Visit Us</h3>
+                <p>
+                  123 Gift Street, Shopping District<br />New York, NY 10001
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Call Us</h3>
+                <p>
+                  <a href="tel:+1234567890">+1 (234) 567-890</a><br />
+                  <a href="tel:+1234567891">+1 (234) 567-891</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email Us</h3>
+                <p>
+                  <a href="mailto:hello@gifthub.com">hello@gifthub.com</a><br />
+                  <a href="mailto:support@gifthub.com">support@gifthub.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Live Chat</h3>
+                <p>Available Mon-Fri<br />9:00 AM - 6:00 PM EST</p>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-pinterest-p"></i
+              ></a>
+              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="faq-header">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-subtitle">Find quick answers to common questions</p>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>What are your shipping options and delivery times?</h3>
+            <i class="fas fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We offer standard shipping (5-7 business days), express shipping
+              (2-3 business days), and same-day delivery in select cities.
+              International shipping is available to over 25 countries with
+              delivery times varying by location.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>What is your return and refund policy?</h3>
+            <i class="fas fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              We offer a 30-day return policy for most items. Products must be
+              in original condition with tags attached. Personalized items are
+              non-refundable unless there's a quality issue. Refunds are
+              processed within 5-7 business days.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>Do you offer gift wrapping services?</h3>
+            <i class="fas fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes! We offer complimentary gift wrapping on all orders. You can
+              choose from various wrapping paper designs and add a personalized
+              message card at checkout. Premium gift wrapping options are also
+              available.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>Can I track my order?</h3>
+            <i class="fas fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Absolutely! Once your order ships, you'll receive a tracking
+              number via email. You can track your package in real-time through
+              our website or the carrier's tracking system.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <h3>Do you offer corporate gifting solutions?</h3>
+            <i class="fas fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Yes, we specialize in corporate gifting! We offer bulk ordering,
+              custom branding, and dedicated account management for businesses.
+              Contact our corporate team for personalized solutions and special
+              pricing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="map-container">
+        <div class="map-header">
+          <h2 class="map-title">Find Our Stores</h2>
+          <p class="map-subtitle">Visit us at our physical locations</p>
+        </div>
+        <div class="map-grid">
+          <div class="map-frame">
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt" style="font-size: 3rem"></i>
+              <p style="margin-top: 20px">Interactive Map</p>
+            </div>
+          </div>
+          <div class="location-cards">
+            <div class="location-card">
+              <h4>🏪 Flagship Store</h4>
+              <p>
+                123 Gift Street, Shopping District<br />New York, NY 10001<br />Open:
+                Mon-Sat 10AM-8PM
+              </p>
+            </div>
+            <div class="location-card">
+              <h4>🏬 Downtown Branch</h4>
+              <p>
+                456 Present Avenue<br />Brooklyn, NY 11201<br />Open: Mon-Fri
+                11AM-7PM
+              </p>
+            </div>
+            <div class="location-card">
+              <h4>📦 Warehouse & Pickup</h4>
+              <p>
+                789 Delivery Road<br />Queens, NY 11101<br />Pickup: Mon-Fri
+                9AM-5PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Office Hours -->
+    <section class="hours-section">
+      <div class="hours-container">
+        <h2 class="hours-title">Customer Service Hours</h2>
+        <div class="hours-grid">
+          <div class="hours-card">
+            <h4>Phone Support</h4>
+            <p>Mon-Fri: 9AM-8PM</p>
+            <p>Sat-Sun: 10AM-6PM</p>
+          </div>
+          <div class="hours-card">
+            <h4>Live Chat</h4>
+            <p>Mon-Fri: 9AM-6PM</p>
+            <p>Sat: 10AM-4PM</p>
+          </div>
+          <div class="hours-card">
+            <h4>Email Response</h4>
+            <p>Within 24 hours</p>
+            <p>7 days a week</p>
+          </div>
+        </div>
+        <p class="hours-note">*All times are in Eastern Standard Time (EST)</p>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="newsletter-content">
+        <h2 class="newsletter-title">Stay Connected</h2>
+        <p class="newsletter-subtitle">
+          Subscribe to get exclusive offers, gift ideas, and updates
+        </p>
+        <form class="newsletter-form">
+          <input
+            type="email"
+            class="newsletter-input"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About GiftHub</h3>
+          <p>
+            Your trusted partner in making every occasion special with the
+            perfect gift.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Shipping Info</a></li>
+            <li><a href="#">Returns</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-pinterest"></i> Pinterest</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 GiftHub. All rights reserved. Made by HB</p>
+      </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-icon">✓</div>
+        <h2 class="modal-title">Message Sent Successfully!</h2>
+        <p class="modal-message">
+          Thank you for contacting us. We'll get back to you within 24 hours.
+        </p>
+        <button class="modal-btn" onclick="closeModal()">OK</button>
+      </div>
+    </div>
+
+<script src="./Javascript/contact.js"></script>
+  </body>
+</html>

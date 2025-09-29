@@ -1,191 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gifex-Perfect Gift Shop</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fff;
-      color: #333;
-    }
-
-    section {
-      padding: 2rem;
-    }
-
-    .banner-bg {
-      background-color: #ffe0ec;
-      padding: 1rem;
-      text-align: center;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1.2rem;
-      color: #ff0066;
-      margin-bottom: 1rem;
-    }
-    .banner-bg span{
-        color: white;
-    }
-
-    h1 {
-      color: rgb(255, 0, 85);
-      font-size: 2.5rem;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    h1 span {
-      color: rgb(0, 229, 255);
-    }
-
-    .sec1 {
-      background-color: rgba(106, 22, 208, 0.532);
-      border: 2px solid #6ed4d1;
-      color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      max-width: 1000px;
-      margin: 1rem auto;
-    }
-
-    .sec1 p {
-      margin: 0;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      color: #6a16d0;
-      margin-top: 3rem;
-    }
-
-    .product-grid {
-      display: grid;
-      gap: 1.5rem;
-      margin-top: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      max-width: 1200px;
-      margin-inline: auto;
-    }
-
-    .product-card {
-      background-color: #f9f9f9;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      padding: 1rem;
-    }
-
-    .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-    }
-
-    .product-name {
-      font-weight: bold;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-    }
-
-    .stars {
-      color: #ffb700;
-      margin: 0.3rem 0;
-    }
-
-    .price {
-      color: #333;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .sec1 {
-        font-size: 1rem;
-      }
-    }
-    </style>
-
-
-</head>
-
-<body>
-
-   <div class="head-bg">
-        <header>
-            <svg class="logo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="150" height="150" viewBox="0,0,256,256">
-            <g transform="translate(49.92,49.92) scale(0.61,0.61)"><g class="logo-shape" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M26.10547,2c-6.28125,0 -9.94922,2.22266 -11.89844,4.89063c-1.94922,2.66797 -2.20703,5.62891 -2.20703,7.10938c0,2.24219 0.71484,4.70313 2.34375,6.65625c1.62891,1.95703 4.21484,3.34375 7.65625,3.34375c0.13672,0 0.41016,-0.00781 0.58984,0c-0.11328,0.35938 -0.25781,0.6875 -0.25781,1.13672c0,1.28906 0.35938,2.23438 0.83984,3.05078c-3.10156,0.19531 -6.28906,0.83203 -8.93359,2.26563c-3.16406,1.71484 -5.58203,4.52734 -5.58203,8.30078c0,1.51953 0.61719,3.79688 2.59375,5.75781c1.97656,1.96094 5.28906,3.48828 10.44531,3.48828c11.73438,0 15.75,-7.41016 15.75,-11.91016c0,-4.09375 -2.25391,-6.62109 -4.30078,-8.35937c-1.02344,-0.87109 -2.00391,-1.58594 -2.66016,-2.22656c-0.66016,-0.64062 -0.93359,-1.10937 -0.93359,-1.59375c0,-0.63281 0.21875,-1.05859 0.68359,-1.60937c0.46484,-0.54687 1.18359,-1.14062 1.95703,-1.88281c1.54688,-1.48828 3.25,-3.71094 3.25,-7.52734c0,-2.70312 -0.91406,-4.62891 -2.01562,-5.89062h0.57422c0.26563,0 0.51953,-0.10547 0.70703,-0.29297l3,-3c0.28516,-0.28516 0.37109,-0.71484 0.21484,-1.08984c-0.15234,-0.375 -0.51562,-0.61719 -0.92187,-0.61719zM22.56641,6c4.78906,0 5.96094,7.10547 5.96094,9.03516c0,0.44922 0.31641,4.96484 -4.12109,4.96484c-3.36328,0 -6.20312,-4.22656 -6.20312,-8.75c0,-1.34375 0.64453,-5.25 4.36328,-5.25zM25.42578,29.90234c0.22656,0.01953 0.44531,0.04688 0.65234,0.09766c1.75781,1.3125 4.92188,3.39453 4.92188,6.90234c-0.00391,1.58594 -0.98437,4.92969 -5.90234,5.91406c-3.97656,0.80078 -10.09766,-0.81641 -10.06641,-5.78125c0.00781,-2.04297 1.14453,-5.76562 7.40234,-6.91016c0.00391,-0.00391 0.00781,-0.00391 0.00781,-0.00391c0.85938,-0.08984 1.71484,-0.12891 2.54688,-0.12109c0.15234,0 0.30469,-0.03125 0.4375,-0.09766z"></path></g></g><g fill="#cf7f7f" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g><path d="M218.565,211.271v3h-21.2v-3c0.76667,-0.40667 1.56,-0.75 2.38,-1.03c0.82,-0.28 1.71667,-0.55 2.69,-0.81v0v-28.11l-5.07,-0.61v-3c0.76667,-0.30667 1.72667,-0.61333 2.88,-0.92c1.15333,-0.30667 2.37,-0.57333 3.65,-0.8c1.28,-0.23333 2.53333,-0.44 3.76,-0.62c1.23333,-0.18 2.31,-0.32 3.23,-0.42v0h2.61v34.48c1.02,0.26 1.94,0.53 2.76,0.81c0.82,0.28 1.59,0.62333 2.31,1.03zM201.125,163.271v0c0,-1.78667 0.61667,-3.19333 1.85,-4.22c1.22667,-1.02667 2.81333,-1.54 4.76,-1.54v0c1.94667,0 3.53333,0.51333 4.76,1.54c1.22667,1.02667 1.84,2.43333 1.84,4.22v0c0,1.74667 -0.61333,3.13 -1.84,4.15c-1.22667,1.02667 -2.81333,1.54 -4.76,1.54v0c-1.94667,0 -3.53333,-0.51333 -4.76,-1.54c-1.23333,-1.02 -1.85,-2.40333 -1.85,-4.15zM245.135,156.521v0c2.1,0 3.98333,0.19 5.65,0.57c1.66,0.38667 2.92667,0.76 3.8,1.12v0c-0.15333,1.68667 -0.48667,3.42667 -1,5.22c-0.51333,1.79333 -0.97333,3.27667 -1.38,4.45v0h-2.62l-3.37,-7.29c-1.33333,0 -2.45,0.14 -3.35,0.42c-0.89333,0.28 -1.61,0.83 -2.15,1.65c-0.53333,0.82 -0.93,1.98333 -1.19,3.49c-0.25333,1.51333 -0.38,3.47333 -0.38,5.88v0v3.84h8.14v4.84h-8.14v28.72c2.66,0.30667 5.11667,0.92 7.37,1.84v0v3h-23.5v-3c1.58667,-0.92 3.27667,-1.53333 5.07,-1.84v0v-28.72h-5.84v-3c1.79333,-1.12667 3.74,-1.97 5.84,-2.53v0v-2.69c0,-3.17333 0.44667,-5.79667 1.34,-7.87c0.9,-2.07333 2.11667,-3.71333 3.65,-4.92c1.54,-1.2 3.34667,-2.03 5.42,-2.49c2.07333,-0.46 4.28667,-0.69 6.64,-0.69zM283.765,206.281l1.46,1.54c-0.40667,0.86667 -1.06,1.75 -1.96,2.65c-0.89333,0.89333 -1.99333,1.68667 -3.3,2.38c-1.30667,0.69333 -2.81667,1.25667 -4.53,1.69c-1.71333,0.43333 -3.57,0.65 -5.57,0.65v0c-3.17333,0 -5.99,-0.47333 -8.45,-1.42c-2.45333,-0.94667 -4.5,-2.30333 -6.14,-4.07c-1.64,-1.76667 -2.88333,-3.88 -3.73,-6.34c-0.84,-2.45333 -1.26,-5.21667 -1.26,-8.29v0c0,-6.55333 1.71333,-11.54667 5.14,-14.98c3.43333,-3.42667 8.19667,-5.14 14.29,-5.14v0c2.60667,0 5.05,0.35667 7.33,1.07c2.28,0.72 4.17333,1.9 5.68,3.54c1.51333,1.63333 2.56333,3.78333 3.15,6.45c0.59333,2.66 0.55667,5.91 -0.11,9.75v0h-23.58c0.05333,4.04667 1.09,7.27333 3.11,9.68c2.02,2.40667 5.00333,3.61 8.95,3.61v0c1.68667,0 3.44,-0.25667 5.26,-0.77c1.81333,-0.51333 3.23333,-1.18 4.26,-2zM269.405,179.331v0c-1.02667,0 -1.93667,0.17667 -2.73,0.53c-0.79333,0.36 -1.48333,1.01333 -2.07,1.96c-0.58667,0.94667 -1.06,2.22667 -1.42,3.84c-0.36,1.61333 -0.61667,3.65 -0.77,6.11v0h12.37c0.35333,-3.99333 0.12,-7.06667 -0.7,-9.22c-0.81333,-2.14667 -2.37333,-3.22 -4.68,-3.22zM324.625,180.711l-10.52,12.98l12.13,15.74c1.33333,0.41333 2.58667,1.02667 3.76,1.84v0v3h-19.58v-2.92c0.56667,-0.40667 1.14333,-0.77667 1.73,-1.11c0.58667,-0.33333 1.18667,-0.60333 1.8,-0.81v0l-7.29,-10.44l-7.07,10.44c0.72,0.26 1.34667,0.54333 1.88,0.85c0.54,0.30667 1.06667,0.63667 1.58,0.99v0v3h-14.52v-3c0.72,-0.40667 1.37333,-0.76333 1.96,-1.07c0.58667,-0.30667 1.26667,-0.56333 2.04,-0.77v0l11.36,-14.13l-11.44,-14.59c-0.72,-0.26 -1.36,-0.53 -1.92,-0.81c-0.56667,-0.28 -1.08,-0.62333 -1.54,-1.03v0v-3h19.28v2.92c-0.61333,0.40667 -1.16333,0.77667 -1.65,1.11c-0.48667,0.33333 -1.09,0.60333 -1.81,0.81v0l6.69,9.52l6.37,-9.52c-0.87333,-0.26 -1.56333,-0.54333 -2.07,-0.85c-0.51333,-0.30667 -0.97667,-0.63667 -1.39,-0.99v0v-3h14.21v3c-0.51333,0.35333 -1.07667,0.68333 -1.69,0.99c-0.61333,0.30667 -1.38,0.59 -2.3,0.85z"></path></g></g></g>
-            </svg>          
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GiftHub - Premium Gift Shop</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader">
+      <i class="fas fa-gift"></i>
     </div>
-    <main>
-        <section>
-            <div class="banner-bg">
-                <p>Gifts For <span>Everyone </span>🎁</p>
-            </div>
 
-            <h1>Perfect Gifts For <span>Everyone</span></h1>
-
-            <div class="sec1">
-                <p>
-                At Gifex, we believe that the perfect gift speaks louder than words. Whether you're shopping for a birthday, anniversary, holiday, or just because — we’ve curated a collection that fits every person and every occasion.
-                <br /><br />
-                GIFEX is a fantastic place to find gifts for absolutely everyone on your list! From unique artisanal crafts and personalized items to the latest tech gadgets and stylish accessories, you'll discover a diverse array of options to suit any taste and occasion. Whether you're searching for a thoughtful present for a family member, a special something for a friend, or a treat for yourself, GIFEX offers a treasure trove of possibilities that are sure to delight.
-                </p>
-            </div>
-
-            <h2>Hot Sellers</h2>
-
-            <div class="product-grid">
-                <div class="product-card">
-                <img src="/pictures/img1.jpg" alt="Product 1">
-                <div class="product-name">Custom Led Lamp</div>
-                <div class="stars">★★★★☆ (4.5)</div>
-                <div class="price">$29.99</div>
-                </div>
-                <div class="product-card">
-                <img src="/pictures/logo/image.png" alt="Product 2">
-                <div class="product-name">Bunch of Sweetness</div>
-                <div class="stars">★★★★☆ (4.5)</div>
-                <div class="price">$19.99</div>
-                </div>
-                <div class="product-card">
-                <img src="/pictures/image0999.png" alt="Product 3">
-                <div class="product-name">Teddy Bear with Flowers</div>
-                <div class="stars">★★★★☆ (4.5)</div>
-                <div class="price">$24.50</div>
-                </div>
-                <div class="product-card">
-                <img src="/pictures/99.png" alt="Product 4">
-                <div class="product-name">Sweet Cake</div>
-                <div class="stars">★★★★☆ (4.5)</div>
-                <div class="price">$39.00</div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- navbar of websites -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo"><i class="fas fa-gift"></i> GiftHub</div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="./shop.html"><i class="fas fa-shopping-bag"></i> Shop</a>
+          </li>
+          <li>
+            <a href="./categories.html"><i class="fas fa-th"></i> Categories</a>
+          </li>
+          <li>
+            <a href="./about.html"><i class="fas fa-info-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="./contact.html"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
+          <li class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart fa-lg"></i>
+            <span class="cart-count">0</span>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
 
 
-</body>
+    <!-- Hero Section Main Body -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Perfect Gifts for Every Occasion</h1>
+        <p>
+          Discover unique and thoughtful gifts that bring joy to your loved
+          ones. From personalized treasures to luxury items.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary">
+            <i class="fas fa-shopping-cart"></i>
+            Shop Now
+          </button>
+          <button class="btn btn-secondary">
+            <i class="fas fa-play-circle"></i>
+            Watch Video
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&h=400&fit=crop"
+          alt="Gift boxes"
+        />
+      </div>
+    </section>
 
+    <!-- Features Section Of gIftHub -->
+    <section class="features">
+      <h2>Why Choose GiftHub?</h2>
+      <div class="feature-grid">
+        <div  class="feature-card">
+          <i class="fas fa-truck"></i>
+          <h3>Free Delivery</h3>
+          <p>
+            Free shipping on all orders over $50. Fast and secure delivery
+            worldwide.
+          </p>
+        </div>
+        <div  class="feature-card">
+          <i class="fas fa-gift"></i>
+          <h3>Gift Wrapping</h3>
+          <p>
+            Beautiful gift wrapping service available for all products at no
+            extra cost.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Secure Payment</h3>
+          <p>
+            100% secure payment processing with multiple payment options
+            available.
+          </p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-undo"></i>
+          <h3>Easy Returns</h3>
+          <p>
+            30-day return policy for your complete satisfaction and peace of
+            mind.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img 
+              src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop" 
+              alt="Luxury Jewelry"
+            />
+            <span class="product-badge">New</span>
+          </div>
+          <div class="product-info">
+            <h3>Luxury Jewelry</h3>
+            <div class="product-price">$199</div>
+            <button class="add-to-cart" onclick="addToCart()">
+              <i class="fas fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img 
+              src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop" 
+              alt="Smart Watch"
+            />
+            <span class="product-badge">-20%</span>
+          </div>
+          <div class="product-info">
+            <h3>Smart Watch</h3>
+            <div class="product-price">$299</div>
+            <button class="add-to-cart" onclick="addToCart()">
+              <i class="fas fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img 
+              src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop" 
+              alt="Vintage Camera"
+            />
+            <span class="product-badge">Hot</span>
+          </div>
+          <div class="product-info">
+            <h3>Vintage Camera</h3>
+            <div class="product-price">$449</div>
+            <button class="add-to-cart" onclick="addToCart()">
+              <i class="fas fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img 
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" 
+              alt="Premium Headphones"
+            />
+            <span class="product-badge">Limited</span>
+          </div>
+          <div class="product-info">
+            <h3>Premium Headphones</h3>
+            <div class="product-price">$159</div>
+            <button class="add-to-cart" onclick="addToCart()">
+              <i class="fas fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img 
+              src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=300&fit=crop" 
+              alt="Designer Sunglasses"
+            />
+            <span class="product-badge">Trending</span>
+          </div>
+          <div class="product-info">
+            <h3>Designer Sunglasses</h3>
+            <div class="product-price">$89</div>
+            <button class="add-to-cart" onclick="addToCart()">
+              <i class="fas fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img 
+              src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop" 
+              alt="Luxury Bag"
+            />
+            <span class="product-badge">Exclusive</span>
+          </div>
+          <div class="product-info">
+            <h3>Luxury Handbag</h3>
+            <div class="product-price">$399</div>
+            <button class="add-to-cart" onclick="addToCart()">
+              <i class="fas fa-cart-plus"></i>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Testimonials Section with Avatar Images and Animations -->
+<section class="testimonials">
+  <h2 class="section-title animate-fade-down">What Our Customers Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card animate-slide-up" data-delay="0">
+      <div class="avatar-wrapper animate-scale">
+        <img 
+          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" 
+          alt="Customer 1"
+          class="testimonial-avatar"
+        />
+        <div class="avatar-ring"></div>
+      </div>
+      <p class="testimonial-text animate-fade-in">"Amazing service and beautiful products! The gift wrapping was perfect."</p>
+      <h4 class="customer-name animate-slide-left">Sarah Johnson</h4>
+      <div class="stars animate-stars">
+        <i class="fas fa-star star-1"></i>
+        <i class="fas fa-star star-2"></i>
+        <i class="fas fa-star star-3"></i>
+        <i class="fas fa-star star-4"></i>
+        <i class="fas fa-star star-5"></i>
+      </div>
+    </div>
+    
+    <div class="testimonial-card animate-slide-up" data-delay="200">
+      <div class="avatar-wrapper animate-scale">
+        <img 
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" 
+          alt="Customer 2"
+          class="testimonial-avatar"
+        />
+        <div class="avatar-ring"></div>
+      </div>
+      <p class="testimonial-text animate-fade-in">"Quick delivery and excellent quality. Will definitely shop again!"</p>
+      <h4 class="customer-name animate-slide-left">Michael Chen</h4>
+      <div class="stars animate-stars">
+        <i class="fas fa-star star-1"></i>
+        <i class="fas fa-star star-2"></i>
+        <i class="fas fa-star star-3"></i>
+        <i class="fas fa-star star-4"></i>
+        <i class="fas fa-star star-5"></i>
+      </div>
+    </div>
+    
+    <div class="testimonial-card animate-slide-up" data-delay="400">
+      <div class="avatar-wrapper animate-scale">
+        <img 
+          src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" 
+          alt="Customer 3"
+          class="testimonial-avatar"
+        />
+        <div class="avatar-ring"></div>
+      </div>
+      <p class="testimonial-text animate-fade-in">"Found the perfect gift for my anniversary. Thank you GiftHub!"</p>
+      <h4 class="customer-name animate-slide-left">Emily Davis</h4>
+      <div class="stars animate-stars">
+        <i class="fas fa-star star-1"></i>
+        <i class="fas fa-star star-2"></i>
+        <i class="fas fa-star star-3"></i>
+        <i class="fas fa-star star-4"></i>
+        <i class="fas fa-star star-5"></i>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <h2>Connect With Us</h2>
+        <p>
+          Follow us on social media for the latest updates and exclusive offers!
+        </p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+        <p>
+          &copy; 2024 GiftHub. All rights reserved.Made by HB
+        </p>
+      </div>
+    </footer>
+
+    <script src="./Javascript/script.js"></script>
+  </body>
 </html>

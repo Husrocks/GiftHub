@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories - GiftHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/categories.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+ <a href="index.html" class="logo">
+          <i class="fas fa-gift"></i> GiftHub
+        </a>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span>Categories</span>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Explore Our Categories</h1>
+        <p>Find the perfect gift for every occasion and everyone special in your life</p>
+        
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search categories...">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Main Categories -->
+    <section class="categories-section">
+        <h2 class="section-title">Shop by Occasion</h2>
+        <p class="section-subtitle">Choose from our wide range of carefully curated categories</p>
+        
+        <div class="categories-grid">
+            <!-- Birthday Category -->
+            <div class="category-card" onclick="goToCategory('birthday')">
+                <div class="category-image">
+                    <img src="./pictures/categories/happybirthday.jpg" alt="Birthday" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">🎂</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Birthday Gifts</h3>
+                    <div class="category-count">256 Products</div>
+                    <p class="category-description">Make their special day unforgettable with our unique birthday gift collection</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Anniversary Category -->
+            <div class="category-card" onclick="goToCategory('anniversary')">
+                <div class="category-image">
+                    <img src="./pictures/categories/anvrsary.jpg" alt="Anniversary" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">💑</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Anniversary</h3>
+                    <div class="category-count">189 Products</div>
+                    <p class="category-description">Celebrate your love story with romantic and thoughtful anniversary gifts</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Wedding Category -->
+            <div class="category-card" onclick="goToCategory('wedding')">
+                <div class="category-image">
+                    <img src="./pictures/categories/wedding.jpg" alt="Wedding" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">💒</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Wedding Gifts</h3>
+                    <div class="category-count">342 Products</div>
+                    <p class="category-description">Beautiful wedding presents to celebrate the happy couple's big day</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Baby Shower Category -->
+            <div class="category-card" onclick="goToCategory('baby')">
+                <div class="category-image">
+                    <img src="./pictures/categories/baby.jpg" alt="Baby Shower" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">👶</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Baby Shower</h3>
+                    <div class="category-count">167 Products</div>
+                    <p class="category-description">Adorable gifts for the little one and thoughtful presents for new parents</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Graduation Category -->
+            <div class="category-card" onclick="goToCategory('graduation')">
+                <div class="category-image">
+                    <img src="./pictures/categories/graduation.png" alt="Graduation" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">🎓</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Graduation</h3>
+                    <div class="category-count">124 Products</div>
+                    <p class="category-description">Celebrate academic achievements with meaningful graduation gifts</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Valentine's Day Category -->
+            <div class="category-card" onclick="goToCategory('valentine')">
+                <div class="category-image">
+                    <img src="./pictures/categories/valentine.jpg" alt="Valentine" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">❤️</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Valentine's Day</h3>
+                    <div class="category-count">298 Products</div>
+                    <p class="category-description">Express your love with romantic Valentine's Day gifts</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Christmas Category -->
+            <div class="category-card" onclick="goToCategory('christmas')">
+                <div class="category-image">
+                    <img src="./pictures/categories/christmas.jpg" alt="Christmas" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">🎄</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Christmas</h3>
+                    <div class="category-count">456 Products</div>
+                    <p class="category-description">Spread holiday cheer with festive Christmas gifts for everyone</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Corporate Category -->
+            <div class="category-card" onclick="goToCategory('corporate')">
+                <div class="category-image">
+                    <img src="./pictures/categories/coperate.jpg" alt="Corporate" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">💼</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Corporate Gifts</h3>
+                    <div class="category-count">213 Products</div>
+                    <p class="category-description">Professional gifts for clients, employees, and business partners</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Thank You Category -->
+            <div class="category-card" onclick="goToCategory('thankyou')">
+                <div class="category-image">
+                    <img src="./pictures/categories/thankyou.jpg" alt="Thank You" loading="eager">
+                    <div class="category-overlay"></div>
+                    <div class="category-icon">🙏</div>
+                </div>
+                <div class="category-content">
+                    <h3 class="category-title">Thank You Gifts</h3>
+                    <div class="category-count">145 Products</div>
+                    <p class="category-description">Show your appreciation with thoughtful thank you gifts</p>
+                    <a href="#" class="category-link">
+                        Explore Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories-section">
+        <div class="featured-categories">
+            <h2 class="featured-title">Shop by Recipient</h2>
+            
+            <div class="featured-grid">
+                <div class="featured-card" onclick="goToRecipient('her')">
+                    <div class="featured-image">
+                        <img src="./pictures/categories/her.jpg" alt="For Her" loading="eager">
+                    </div>
+                    <h3 class="featured-name">For Her</h3>
+                    <p class="featured-items">324 Items</p>
+                </div>
+
+                <div class="featured-card" onclick="goToRecipient('him')">
+                    <div class="featured-image">
+                        <img src="./pictures/categories/him.jpg" alt="For Him" loading="eager">
+                    </div>
+                    <h3 class="featured-name">For Him</h3>
+                    <p class="featured-items">289 Items</p>
+                </div>
+
+                <div class="featured-card" onclick="goToRecipient('kids')">
+                    <div class="featured-image">
+                        <img src="./pictures/categories/kids.jpg" alt="For Kids" loading="eager">
+                    </div>
+                    <h3 class="featured-name">For Kids</h3>
+                    <p class="featured-items">412 Items</p>
+                </div>
+
+                <div class="featured-card" onclick="goToRecipient('teens')">
+                    <div class="featured-image">
+                        <img src="./pictures/categories/teens.jpg" alt="For Teens" loading="eager">
+                    </div>
+                    <h3 class="featured-name">For Teens</h3>
+                    <p class="featured-items">198 Items</p>
+                </div>
+
+                <div class="featured-card" onclick="goToRecipient('parents')">
+                    <div class="featured-image">
+                        <img src="./pictures/categories/parents.jpg" alt="For Parents" loading="eager">
+                    </div>
+                    <h3 class="featured-name">For Parents</h3>
+                    <p class="featured-items">156 Items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers Banner -->
+    <section class="offers-banner">
+        <h2 class="offers-title">Special Holiday Collection</h2>
+        <p class="offers-description">Get up to 50% off on selected items. Limited time offer!</p>
+        <button class="offers-button" onclick="goToOffers()">Shop Now</button>
+    </section>
+
+    <!-- Popular Tags -->
+    <section class="tags-section">
+        <h2 class="tags-title">Popular Gift Ideas</h2>
+        <div class="tags-container">
+            <a href="#" class="tag">Personalized<span class="tag-count">89</span></a>
+            <a href="#" class="tag">Luxury<span class="tag-count">124</span></a>
+            <a href="#" class="tag">Eco-Friendly<span class="tag-count">67</span></a>
+            <a href="#" class="tag">Handmade<span class="tag-count">234</span></a>
+            <a href="#" class="tag">Tech Gadgets<span class="tag-count">156</span></a>
+            <a href="#" class="tag">Home Decor<span class="tag-count">189</span></a>
+            <a href="#" class="tag">Fashion<span class="tag-count">267</span></a>
+            <a href="#" class="tag">Books<span class="tag-count">98</span></a>
+            <a href="#" class="tag">Jewelry<span class="tag-count">145</span></a>
+            <a href="#" class="tag">Wellness<span class="tag-count">112</span></a>
+            <a href="#" class="tag">Gourmet Food<span class="tag-count">87</span></a>
+            <a href="#" class="tag">Experience Gifts<span class="tag-count">76</span></a>
+        </div>
+    </section>
+
+    <!-- Subcategories Section -->
+    <section class="categories-section">
+        <div class="subcategories">
+            <h2 class="section-title">Shop by Type</h2>
+            
+            <div class="subcategories-grid">
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">💐</div>
+                    <div class="subcategory-name">Flowers</div>
+                    <div class="subcategory-count">89 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">🍫</div>
+                    <div class="subcategory-name">Chocolates</div>
+                    <div class="subcategory-count">156 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">💍</div>
+                    <div class="subcategory-name">Jewelry</div>
+                    <div class="subcategory-count">234 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">🧸</div>
+                    <div class="subcategory-name">Toys</div>
+                    <div class="subcategory-count">312 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">📚</div>
+                    <div class="subcategory-name">Books</div>
+                    <div class="subcategory-count">198 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">🕯️</div>
+                    <div class="subcategory-name">Candles</div>
+                    <div class="subcategory-count">67 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">🖼️</div>
+                    <div class="subcategory-name">Photo Frames</div>
+                    <div class="subcategory-count">124 items</div>
+                </a>
+                
+                <a href="#" class="subcategory-item">
+                    <div class="subcategory-icon">🧴</div>
+                    <div class="subcategory-name">Beauty & Spa</div>
+                    <div class="subcategory-count">145 items</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About GiftHub</h3>
+                <p>Your one-stop destination for finding the perfect gifts for every occasion and everyone special in your life.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="#">Birthday Gifts</a></li>
+                    <li><a href="#">Anniversary</a></li>
+                    <li><a href="#">Wedding</a></li>
+                    <li><a href="#">Corporate</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i> Pinterest</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <script src="./Javascript/categories.js"></script>
+</body>
+</html>

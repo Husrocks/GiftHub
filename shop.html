@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - GiftHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/shop.css">
+</head>
+<body>
+        <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+ <a href="index.html" class="logo">
+          <i class="fas fa-gift"></i> GiftHub
+        </a>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Shop Header -->
+    <header class="shop-header">
+        <h1>Shop Our Collection</h1>
+        <p>Discover the perfect gift for your loved ones</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="breadcrumb">
+            <a href="./index.html">Home</a>
+            <span>/</span>
+            <span>Shop</span>
+        </div>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- Main Shop Container -->
+    <div class="shop-container">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3><i class="fas fa-filter"></i> Categories</h3>
+                <label class="filter-option">
+                    <input type="checkbox" checked> All Products
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Birthday Gifts
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Anniversary
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Wedding
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Baby Shower
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Corporate
+                </label>
+            </div>
+
+            <div class="filter-section">
+                <h3><i class="fas fa-dollar-sign"></i> Price Range</h3>
+                <div class="price-range">
+                    <span>$0</span>
+                    <input type="range" min="0" max="500" value="250" id="priceRange">
+                    <span>$500</span>
+                </div>
+                <div class="price-display">Max: $<span id="priceValue">250</span></div>
+            </div>
+
+            <div class="filter-section">
+                <h3><i class="fas fa-star"></i> Rating</h3>
+                <label class="filter-option">
+                    <input type="checkbox"> 5 Stars
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> 4 Stars & Up
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> 3 Stars & Up
+                </label>
+            </div>
+
+            <div class="filter-section">
+                <h3><i class="fas fa-tag"></i> Special Offers</h3>
+                <label class="filter-option">
+                    <input type="checkbox"> On Sale
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> New Arrivals
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Free Shipping
+                </label>
+            </div>
+        </aside>
+
+        <!-- Products Section -->
+        <main class="products-section">
+            <!-- Sort Bar -->
+            <div class="sort-bar">
+                <div class="results-count">Showing 12 of 48 products</div>
+                <div class="sort-options">
+                    <select>
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                        <option>Best Sellers</option>
+                        <option>Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <span class="product-badge">-30%</span>
+                    <div class="product-image">
+                        <img src="./pictures/luxury gift.png" alt="luxury gift">
+                        <!-- <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400&h=300&fit=crop" alt="Gift Box"> -->
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(1)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(1)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(1)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Birthday Gifts</div>
+                        <div class="product-name">Luxury Gift Box Set with Ribbon</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(124)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$34.99</span>
+                            <span class="original-price">$49.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(1)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <span class="product-badge new">New</span>
+                    <div class="product-image">
+                        <img src="./pictures/red rose.png" alt="Rose Bouquet">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(2)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(2)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(2)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Anniversary</div>
+                        <div class="product-name">Premium Red Rose Bouquet</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(89)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$59.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(2)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./pictures/neklace-set.png" alt="Jewelry Box">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(3)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(3)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(3)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Wedding</div>
+                        <div class="product-name">Elegant Pearl Necklace Set</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(56)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$129.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(3)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <span class="product-badge">-20%</span>
+                    <div class="product-image">
+                        <img src="./pictures/watch.png" alt="Watch">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(4)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(4)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(4)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Corporate</div>
+                        <div class="product-name">Classic Leather Watch</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(203)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$199.99</span>
+                            <span class="original-price">$249.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(4)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <span class="product-badge new">New</span>
+                    <div class="product-image">
+                        <img src="./pictures/candel.jpg" alt="Candle Set">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(5)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(5)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(5)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Home Decor</div>
+                        <div class="product-name">Aromatic Candle Gift Set</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(67)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$44.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(5)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./pictures/bear.png" alt="Teddy Bear">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(6)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(6)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(6)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Baby Shower</div>
+                        <div class="product-name">Giant Teddy Bear Plush</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(158)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$79.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(6)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <span class="product-badge">-15%</span>
+                    <div class="product-image">
+                        <img src="./pictures/perfume.jpg" alt="Perfume">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(7)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(7)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(7)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Anniversary</div>
+                        <div class="product-name">Luxury Perfume Collection</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(92)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$84.99</span>
+                            <span class="original-price">$99.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(7)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <span class="product-badge new">New</span>
+                    <div class="product-image">
+                        <img src="./pictures/choco.png" alt="Chocolate Box">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(8)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(8)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(8)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Birthday Gifts</div>
+                        <div class="product-name">Belgian Chocolate Gift Box</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(176)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$39.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(8)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./pictures/wine.png" alt="Wine Set">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(9)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(9)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(9)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Corporate</div>
+                        <div class="product-name">Premium Wine Gift Set</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(134)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$149.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(9)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <span class="product-badge">-25%</span>
+                    <div class="product-image">
+                        <img src="./pictures/photo.jpg" alt="Photo Frame">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(10)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(10)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(10)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Home Decor</div>
+                        <div class="product-name">Personalized Photo Frame Set</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(78)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$29.99</span>
+                            <span class="original-price">$39.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(10)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card">
+                    <span class="product-badge new">New</span>
+                    <div class="product-image">
+                        <img src="./pictures/spa-set.jpg" alt="Spa Set">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(11)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(11)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(11)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Wellness</div>
+                        <div class="product-name">Luxury Spa & Bath Gift Set</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(145)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$64.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(11)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="./pictures/indoor-plants.png" alt="Plant">
+                        <div class="product-overlay">
+                            <div class="overlay-btn" onclick="quickView(12)">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToWishlist(12)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="overlay-btn" onclick="addToCart(12)">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Home Decor</div>
+                        <div class="product-name">Indoor Plant Collection</div>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="rating-count">(112)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">$54.99</span>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addToCart(12)">
+                            <i class="fas fa-shopping-bag"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button disabled><i class="fas fa-chevron-left"></i></button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Quick View</h2>
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="" class="modal-image" id="modalImage">
+                <div class="modal-info">
+                    <h2 id="modalTitle">Product Name</h2>
+                    <div class="price" id="modalPrice">$0.00</div>
+                    <div class="description">
+                        This is a premium quality product perfect for gifting. Made with the finest materials and attention to detail.
+                    </div>
+                    <div class="quantity-selector">
+                        <span>Quantity:</span>
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="number" class="quantity-input" value="1" min="1" id="quantityInput">
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addToCartFromModal()">
+                        <i class="fas fa-shopping-bag"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <span class="modal-close" onclick="toggleCart()">&times;</span>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner"></div>
+
+ <script src="./Javascript/shop.js"></script>
+</body>
+</html>
