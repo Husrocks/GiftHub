@@ -60,7 +60,7 @@ function showNotification(message) {
         position: fixed;
         top: 100px;
         right: 30px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000ff 0%, #764ba2 100%);
         color: white;
         padding: 15px 30px;
         border-radius: 10px;
@@ -213,7 +213,7 @@ window.addEventListener('load', typeWriter);
 
 // Add confetti effect on add to cart
 function createConfetti() {
-    const colors = ['#ff6b6b', '#4ecdc4', '#667eea', '#764ba2', '#ffd700'];
+    const colors = ['#ff6b6b', '#4ecdc4', '#000000ff', '#764ba2', '#ffd700'];
     
     for (let i = 0; i < 50; i++) {
         const confetti = document.createElement('div');

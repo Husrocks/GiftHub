@@ -5,11 +5,11 @@
 }
 
 :root {
-  --primary: #ff6b6b;
-  --secondary: #4ecdc4;
+  --primary: #6C63FF;
+  --secondary: #ba8de6;
   --dark: #2d3436;
   --light: #ffffff;
-  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient: linear-gradient(135deg, #000000 0%, #764ba2 100%);
 }
 
 body {
@@ -215,64 +215,7 @@ nav {
   }
 }
 
-/* Dark Mode Toggle
-.toggle-container {
-  position: fixed;
-  top: 100px;
-  right: 30px;
-  z-index: 999;
-  animation: slideIn 1s ease;
-}
 
-@keyframes slideIn {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.toggle-switch {
-  position: relative;
-  width: 60px;
-  height: 30px;
-  background: #ccc;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.toggle-switch::after {
-  content: "\f185";
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: white;
-  top: 2px;
-  left: 2px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: #ffd700;
-  transition: 0.3s;
-}
-
-.toggle-switch.active {
-  background: var(--secondary);
-}
-
-.toggle-switch.active::after {
-  content: "\f186";
-  transform: translateX(30px);
-  color: var(--dark);
-} */
 
 /* Hero Section */
 .hero {
@@ -740,7 +683,7 @@ body.dark-mode .product-info h3 {
 /* Testimonials Section Base Styles */
 .testimonials {
   padding: 80px 20px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
   position: relative;
   overflow: hidden;
 }
@@ -819,7 +762,7 @@ body.dark-mode .product-info h3 {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #000000, #764ba2);
   z-index: 1;
   animation: rotateRing 3s linear infinite;
 }
@@ -847,7 +790,7 @@ body.dark-mode .product-info h3 {
 .testimonial-text::after {
   content: '"';
   font-size: 2rem;
-  color: #667eea;
+  color: #68428F;
   position: absolute;
   opacity: 0.3;
   animation: quotesPulse 2s ease-in-out infinite;

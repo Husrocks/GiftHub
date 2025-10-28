@@ -7,7 +7,7 @@
 
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         min-height: 100vh;
         overflow-x: hidden;
       }
@@ -46,7 +46,7 @@
       .logo {
         font-size: 2rem;
         font-weight: bold;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-decoration: none;
@@ -84,7 +84,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         transition: width 0.3s;
       }
 
@@ -274,7 +274,7 @@
       .form-group textarea:focus,
       .form-group select:focus {
         outline: none;
-        border-color: #667eea;
+        border-color: #68428F;
         background: white;
         transform: translateY(-2px);
         box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
@@ -294,7 +294,7 @@
       }
 
       .form-group:focus-within i {
-        color: #667eea;
+        color: #68428F;
       }
 
       .checkbox-group {
@@ -316,7 +316,7 @@
       }
 
       .submit-btn {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         color: white;
         padding: 15px 40px;
         border: none;
@@ -336,7 +336,7 @@
         left: -100%;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        background: linear-gradient(135deg, #000000 0%, #667eea 100%);
         transition: left 0.5s;
       }
 
@@ -356,7 +356,7 @@
 
       /* Contact Info Section */
       .contact-info-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         padding: 60px;
         color: white;
         display: flex;
@@ -456,7 +456,7 @@
         align-items: center;
         justify-content: center;
         font-size: 1.3rem;
-        color: #667eea;
+        color: #68428F;
         flex-shrink: 0;
       }
 
@@ -513,7 +513,7 @@
 
       .social-icon:hover {
         background: white;
-        color: #667eea;
+        color: #68428F;
         transform: translateY(-5px) scale(1.1);
       }
 
@@ -586,7 +586,7 @@
       }
 
       .faq-question:hover {
-        color: #667eea;
+        color: #68428F;
       }
 
       .faq-question h3 {
@@ -597,7 +597,7 @@
 
       .faq-icon {
         font-size: 1.2rem;
-        color: #667eea;
+        color: #68428F;
         transition: transform 0.3s;
       }
 
@@ -674,7 +674,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         color: white;
         font-size: 1.5rem;
       }
@@ -689,7 +689,7 @@
         background: #f8f9fa;
         padding: 25px;
         border-radius: 15px;
-        border-left: 4px solid #667eea;
+        border-left: 4px solid #68428F;
         transition: all 0.3s ease;
         animation: slideInRight 0.8s ease both;
       }
@@ -769,7 +769,7 @@
       }
 
       .hours-card h4 {
-        color: #667eea;
+        color: #68428F;
         margin-bottom: 10px;
       }
 
@@ -785,7 +785,7 @@
 
       /* Newsletter Section */
       .newsletter-section {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         padding: 60px 20px;
         text-align: center;
         color: white;
@@ -828,7 +828,7 @@
       .newsletter-btn {
         padding: 15px 30px;
         background: white;
-        color: #667eea;
+        color: #68428F;
         border: none;
         border-radius: 50px;
         font-weight: 600;
@@ -876,7 +876,7 @@
       }
 
       .footer-section a:hover {
-        color: #667eea;
+        color: #68428F;
       }
 
       .footer-bottom {
@@ -941,7 +941,7 @@
       }
 
       .modal-btn {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #000000 0%, #764ba2 100%);
         color: white;
         padding: 12px 30px;
         border: none;
